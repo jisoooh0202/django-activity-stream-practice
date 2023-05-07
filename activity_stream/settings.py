@@ -38,7 +38,18 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "dashboard",
+    "actstream",
 ]
+
+SITE_ID = 1
+
+ACTSTREAM_SETTINGS = {
+    "MANAGER": "dashboard.managers.MyActionManager",
+    "FETCH_RELATIONS": True,
+    "USE_PREFETCH": True,
+    "USE_JSONFIELD": True,
+    "GFK_FETCH_DEPTH": 1,
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
