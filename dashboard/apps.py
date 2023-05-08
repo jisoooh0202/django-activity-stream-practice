@@ -7,5 +7,6 @@ class DashboardConfig(AppConfig):
     def ready(self):
         from actstream import registry
         from django.contrib.auth.models import User
+        import dashboard.signals
 
         registry.register(User, self.get_model("Task"), self.get_model("Supervisor"))
