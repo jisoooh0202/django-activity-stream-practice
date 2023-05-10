@@ -37,14 +37,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "dashboard",
+    "accounts",
+    "dashboards",
     "actstream",
 ]
 
 SITE_ID = 1
 
 ACTSTREAM_SETTINGS = {
-    "MANAGER": "dashboard.managers.MyActionManager",
+    "MANAGER": "dashboards.managers.MyActionManager",
     "FETCH_RELATIONS": True,
     "USE_PREFETCH": True,
     "USE_JSONFIELD": True,

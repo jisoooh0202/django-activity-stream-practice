@@ -1,12 +1,12 @@
 from django.apps import AppConfig
 
 
-class DashboardConfig(AppConfig):
-    name = "dashboard"
+class DashboardsConfig(AppConfig):
+    name = "dashboards"
 
     def ready(self):
         from actstream import registry
         from django.contrib.auth.models import User
-        import dashboard.signals
+        import dashboards.signals
 
         registry.register(User, self.get_model("Task"), self.get_model("Supervisor"))
