@@ -43,3 +43,5 @@ python manage.py runserver
 ```
 
 Try login multiple times to see the activity.
+
+![Screenshot](https://github.com/jisoooh0202/django-activity-stream-practice/blob/master/assets/sample.png)
