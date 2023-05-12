@@ -13,13 +13,13 @@
 
   <p><a href="{% url 'logout' %}">Log Out</a></p>
 
-  <h2>Activity with templatetag</h2>
+  {% comment %} <h2>Activity with templatetag</h2>
   {% activity_stream 'actor' user %}
-  {% for action in action_list %}
+  {% for action in recent_activities %}
     {% display_action action %}
   {% empty %}
     <li>No recent activities.</li>
-  {% endfor %}
+  {% endfor %} {% endcomment %}
 
   <h2>Activity with Simon's method</h2>
   <ul>
