@@ -2,6 +2,10 @@
 
 For the step by step guide, visit [this post](https://jnpnote.com/django-activity-stream-practice/).
 
+Here is the sample screenshot.
+
+![Screenshot](https://github.com/jisoooh0202/django-activity-stream-practice/blob/master/assets/sample.png)
+
 ## To Run the project
 
 clone the repo and get into the project directory
@@ -43,5 +47,3 @@ python manage.py runserver
 ```
 
 Try login multiple times to see the activity.
-
-![Screenshot](https://github.com/jisoooh0202/django-activity-stream-practice/blob/master/assets/sample.png)
