@@ -1,14 +1,9 @@
-from django.db import models
-from django.contrib.auth.models import User
+from .managers import MyActionManager
+from actstream.models import Action
 
 
-class Task(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField(null=True, blank=True)
+class MyAction(Action):
+    objects = MyActionManager()
 
-
-class Supervisor(models.Model):
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True, related_name="supervisor"
-    )
-    task = models.ManyToManyField(Task, related_name="tasks")
+    class Meta:
+        proxy = True

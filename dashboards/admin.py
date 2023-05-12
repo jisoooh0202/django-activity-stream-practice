@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Task, Supervisor
+from .models import MyAction
 
-admin.site.register(Task)
 
-admin.site.register(Supervisor)
+admin.site.register(MyAction)
