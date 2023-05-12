@@ -1,7 +1,12 @@
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.views import generic
+from .models import MyAction
 
 
-@login_required
-def dashboard(request):
-    return render(request, "dashboards/dashboard.html")
+class MyActionStreamView(generic.ListView):
+    model = MyAction
+    template_name = "dashboards/dashboard.html"
+    context_object_name = "action_list"
+
+    def get_queryset(self):
+        # Use custom manager methods or filters for CustomActionManagerOne
+        return MyAction.objects.all()
